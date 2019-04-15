@@ -1,0 +1,157 @@
+body {
+    background: #FFF;
+    color: #3E3F43;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'Mukta', sans-serif !important;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+}
+
+hr{
+    border-color: rgba(204, 204, 204, 0.1);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.main__content {
+    padding: 60px 0;
+}
+
+.main__container{
+    max-width: 1000px;
+    padding: 0;
+    margin: 0 auto;
+    @media (max-width: 765px){
+        padding: 20px;
+    }
+}
+
+.page__header{
+    margin-bottom: 40px;
+}
+
+.page__header .page__title{
+    font-size: 28px;
+    margin: 0;
+}
+
+.page__header .page__title__small{
+    font-size: 12px;
+    margin-top: 2px;
+    color: #8c8a8a;
+    font-weight: 500;
+}
+
+.converter{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    @media (max-width: 765px){
+        flex-direction: column;
+    }
+}
+
+.converter .from__container, .converter .to__container{
+    flex: 0 0 43%;
+    display: flex;
+    flex-direction: column;
+}
+
+.converter .swap__container{
+    flex: 0 0 10%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    background: #4987df59;
+    @media (max-width: 765px){
+        height: 50px;
+        width: 50px;
+        justify-content: center;
+        margin: 0 auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.swap__container__mini:hover{
+    cursor: pointer;
+    background: #000;
+}
+
+.swap__container__mini:hover i{
+    color: #fff;
+}
+
+.swap__container__mini{
+    flex: 1;
+    display: flex;
+    min-height: 100%;
+    min-width: 100%;
+    border-radius: 50%;
+    background: #4987DF;
+    align-items: center;
+    justify-content: center;
+}
+
+.swap__container__mini i{
+    font-size: 22px;
+    color: #FFFFFF;
+}
+
+.from__container select, .to__container select {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    margin-bottom: 20px;
+    background: transparent;
+    border: 1px solid #eee;
+}
+
+.coverter__input{
+    position: relative;
+    margin-top: 20px;
+}
+
+.coverter__input input{
+    height: 100px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 52px;
+    font-weight: 200;
+    text-indent: 50px;
+    margin-bottom: 20px;
+    color: rgba(0,0,0,0.6);
+    background: transparent;
+    border-bottom:  1px solid #eee;
+}
+
+.coverter__input span.currency{
+    top: 40px;
+    font-size: 22px;
+    font-weight: 100;
+    position: absolute;
+    color: rgba(0,0,0,0.6);
+}
+
+.top_title {
+    font-size: 11px;
+    margin-bottom: 5px;
+    color: rgba(0,0,0,0.6);
+    text-transform: uppercase;
+}
