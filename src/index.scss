@@ -67,6 +67,9 @@ img{
     flex: 0 0 43%;
     display: flex;
     flex-direction: column;
+    @media (max-width: 765px){
+        width: 100%;
+    }
 }
 
 .converter .swap__container{
@@ -147,6 +150,36 @@ img{
     font-weight: 100;
     position: absolute;
     color: rgba(0,0,0,0.6);
+}
+
+.currency__chart__history{
+    margin-top: 60px;
+}
+
+.chart__view__menu{
+    display: flex;
+    margin-bottom: 40px;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0,0,0,0.02);
+    border: 1px solid rgba(0,0,0,0.02);
+
+    @media(max-width: 765px){
+        flex-direction: column;
+    }
+}
+
+.chart__view__menu .cv__menu__item{
+    padding: 20px;
+}
+
+.chart__date__range{
+    display: flex;
+    align-items: center;
+}
+
+.chart__date__range span {
+    margin-right: 20px;
 }
 
 .top_title {

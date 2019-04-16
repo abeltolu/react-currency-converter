@@ -8,7 +8,8 @@
         <base href="/">
 
         <!--Load Google Fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+        <link rel='preload' href='https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800' as='style' onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800"></noscript>
         
         <!--Lazy load Ionicons-->
         <link rel='preload' href='https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css' as='style' onload="this.onload=null;this.rel='stylesheet'">
