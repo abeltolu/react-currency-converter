@@ -8,9 +8,9 @@ const compression = require("compression");
 const app = express();
 
 // Point static path to dist
-app.use('/', express.static(path.join(__dirname, '..', 'dist')));
+/*app.use('/', express.static(path.join(__dirname, '..', 'dist')));
 app.use('/dist', express.static(path.join(__dirname, '..', 'dist')));
-app.use('/assets', express.static('assets'));
+app.use('/assets', express.static('assets'));*/
 
 
 const routes = require('./routes');
