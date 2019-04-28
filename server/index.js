@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const http = require('http');
-const compression = require('compression');
+const compression = require("compression");
 
 const app = express();
 
@@ -25,12 +25,10 @@ function shouldCompress(req, res) {
     return compression.filter(req, res);
 }
   
-/*app.use(compression({
+app.use(compression({
     level: 2,               // set compression level from 1 to 9 (6 by default)
     filter: shouldCompress, // set predicate to determine whether to compress
-}));*/
-
-app.use(compression());
+}));
 
 /** Create HTTP server. */
 const server = http.createServer(app);
