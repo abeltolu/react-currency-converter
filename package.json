@@ -5,12 +5,12 @@
     "main": "server/index.js",
     "scripts": {
         "dev": "webpack-dev-server",
-    "start": "NODE_ENV='production' node server/index.js",
-    "start:dev": "nodemon",
-    "build": "NODE_ENV='production' webpack -p",
-    "build:dev": "NODE_ENV='development' webpack -d",
-    "prebuild": "rimraf ./dist/*",
-    "heroku-postbuild": "yarn build"
+        "start": "NODE_ENV='production' node server/index.js",
+        "start:dev": "nodemon",
+        "build": "NODE_ENV='production' webpack -p --config config/webpack.prod.config.js",
+        "build:dev": "NODE_ENV='development' webpack -d --config config/webpack.base.config.js",
+        "prebuild": "rimraf ./dist/*",
+        "heroku-postbuild": "yarn build"
     },
     "repository": {
         "type": "git",
