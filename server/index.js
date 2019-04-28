@@ -10,10 +10,9 @@ const app = express();
 //const routes = require('./routes');
 //app.use('/', routes);
 
-app.get('*.js', function (request, response, next) {
-    console.log('js requested');
-    request.url = request.url + '.gz';
-    response.set('Content-Encoding', 'gzip');
+app.get('*.js', function (req, res, next) {
+    req.url = req.url + '.gz';
+    res.set('Content-Encoding', 'gzip');
     next();
 });
 

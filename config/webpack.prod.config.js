@@ -12,7 +12,7 @@ const prodConfiguration = env => {
     return merge([
         {
             optimization: {
-                runtimeChunk: 'multiple',
+                runtimeChunk: 'single',
                 splitChunks: {
                     cacheGroups: {
                         vendor: {
