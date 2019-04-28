@@ -7,11 +7,18 @@ const compression = require("compression");
 
 const app = express();
 
-const routes = require('./routes');
-app.use('/', routes);
+//const routes = require('./routes');
+//app.use('/', routes);
+
+app.get('*.js', function (request, response, next) {
+    console.log('js requested');
+    request.url = request.url + '.gz';
+    response.set('Content-Encoding', 'gzip');
+    next();
+});
 
 // Point static path to dist
-//app.use('/', express.static(path.join(__dirname, '..', 'dist')));
+app.use('/', express.static(path.join(__dirname, '..', 'dist')));
 app.use('/dist', express.static(path.join(__dirname, '..', 'dist')));
 app.use('/assets', express.static('assets'));
 
