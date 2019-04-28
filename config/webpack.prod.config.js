@@ -12,7 +12,7 @@ const prodConfiguration = env => {
     return merge([
         {
             optimization: {
-                /*runtimeChunk: 'single',
+                runtimeChunk: 'single',
                 splitChunks: {
                     cacheGroups: {
                         vendor: {
@@ -21,13 +21,13 @@ const prodConfiguration = env => {
                             chunks: 'all'
                         }
                     }
-                },*/
+                },
                 minimizer: [new UglifyJsPlugin()],
             },
             plugins: [
                 new MiniCssExtractPlugin(),
                 new OptimizeCssAssetsPlugin(),
-                new Visualizer({ filename: './statistics.html' }),
+                //new Visualizer({ filename: './statistics.html' }),
             ],
         },
     ]);
