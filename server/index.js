@@ -7,14 +7,13 @@ const compression = require("compression");
 
 const app = express();
 
-// Point static path to dist
-app.use('/', express.static(path.join(__dirname, '..', 'dist')));
-/*app.use('/dist', express.static(path.join(__dirname, '..', 'dist')));
-app.use('/assets', express.static('assets'));*/
-
-
 const routes = require('./routes');
 app.use('/', routes);
+
+// Point static path to dist
+app.use('/', express.static(path.join(__dirname, '..', 'dist')));
+app.use('/dist', express.static(path.join(__dirname, '..', 'dist')));
+app.use('/assets', express.static('assets'));
 
 /** Get port from environment and store in Express. */
 const port = process.env.PORT || 8080;
