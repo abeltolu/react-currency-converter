@@ -4,12 +4,13 @@
     "description": "Simple currency converter built with React.js",
     "main": "server/index.js",
     "scripts": {
-        "start": "node server/index.js",
-        "dev": "webpack-dev-server --mode development --config config/webpack.base.config.js --open --hot --history-api-fallback --env.PLATFORM=local --env.VERSION=stag --compress",
-        "prebuild": "webpack --mode production --config config/webpack.prod.config.js --env.PLATFORM=production --env.VERSION=stag --progress",
-        "build": "node server",
-        "heroku-postbuild": "npm install --dev && npm run prebuild && npm start",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dev": "webpack-dev-server",
+    "start": "NODE_ENV='production' node server/index.js",
+    "start:dev": "nodemon",
+    "build": "NODE_ENV='production' webpack -p",
+    "build:dev": "NODE_ENV='development' webpack -d",
+    "prebuild": "rimraf ./dist/*",
+    "heroku-postbuild": "yarn build"
     },
     "repository": {
         "type": "git",
