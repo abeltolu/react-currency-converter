@@ -10,7 +10,7 @@
         "build": "NODE_ENV='production' webpack -p --config config/webpack.prod.config.js",
         "build:dev": "NODE_ENV='development' webpack -d --config config/webpack.base.config.js",
         "prebuild": "rimraf ./dist/*",
-        "heroku-postbuild": "yarn build"
+        "heroku-postbuild": "npm build"
     },
     "repository": {
         "type": "git",
