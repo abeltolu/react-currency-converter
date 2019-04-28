@@ -11,7 +11,7 @@ const routes = require('./routes');
 app.use('/', routes);
 
 // Point static path to dist
-app.use('/', express.static(path.join(__dirname, '..', 'dist')));
+//app.use('/', express.static(path.join(__dirname, '..', 'dist')));
 app.use('/dist', express.static(path.join(__dirname, '..', 'dist')));
 app.use('/assets', express.static('assets'));
 
