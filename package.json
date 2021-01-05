@@ -26,7 +26,7 @@
     },
     "homepage": "https://github.com/abeltolu/react-currency-converter#readme",
     "dependencies": {
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "compression": "^1.7.4",
         "connected-react-router": "^6.3.1",
         "dayjs": "^1.8.12",
